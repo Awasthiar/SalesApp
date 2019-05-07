@@ -1,0 +1,14 @@
+<ActionBar title="Sales Master"></ActionBar>
+<flexboxlayout>
+<StackLayout class="form" [class.dark]="!isLoggingIn" [formGroup]="loginform">
+<Image  class="logo" src="~/assets/images/logo.png"></Image>
+<Label text="Email"></Label>
+<TextField hint="Email Address" class="input-field" keyboardType="email"
+autocorrect="false" autocapitalizationType="none" formControlName="email"></TextField>
+<Label text="Password"></Label>
+<TextField hint="Password" secure="true" formControlName="password"></TextField>
+
+<button text="Login" (tap)="onLogin(loginform.value)" class="btn"></button>
+
+</StackLayout>
+</flexboxlayout>

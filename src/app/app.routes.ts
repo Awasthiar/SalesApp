@@ -1,15 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
-  {
-      path: '',
-      redirectTo: '/home',
-      pathMatch: 'full',
-  },
-  {
-      path: 'home',
-      component: HomeComponent,
-  },
+  {path: '',loadChildren:'./modules/panel/panel.module#PanelModule'},
+  {path: 'dashboard', loadChildren:'./modules/dashboard/dashboard.module#DashboardModule'},
+  {path:'add-edit',loadChildren:'./modules/add-edit/add-edit.module#AddEditModule'},
+
 ];

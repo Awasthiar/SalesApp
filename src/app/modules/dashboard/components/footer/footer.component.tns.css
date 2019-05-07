@@ -1,0 +1,8 @@
+/* Add mobile styles for the component here.  */
+.footer1{
+    padding:20;
+    background-Color:rgb(38, 133, 243);
+    color:white;
+    font-Size:10;
+    z-index:1;
+}

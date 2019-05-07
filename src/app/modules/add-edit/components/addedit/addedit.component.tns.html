@@ -1,0 +1,15 @@
+<ActionBar [title]="title" (loaded)="onLoadedActionBar()">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<flexboxlayout flexDirection="column" width="300" height="300">
+    <StackLayout class="form" width:210 height:210 [class.dark]="!isLoggingIn" [formGroup]="addTeamForm">
+    <label text="Team"></label>
+    <TextView hint ="Team"  formControlName="team_name" ></TextView>
+    
+    <label text="Revenue"></label>
+    <TextView hint ="Revenue" formControlName="amount"></TextView>
+    
+    <button text="Add Team" class="button" (tap)="addTeam(addTeamForm.value)"></button>
+    
+    </StackLayout>
+</flexboxlayout>
